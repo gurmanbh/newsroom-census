@@ -1,0 +1,149 @@
+*{
+	-web-kit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	font-family: 'Roboto';
+}
+
+h1{
+	text-align: center;
+}
+
+#menu span{
+	line-height: 3em;
+	font-size: 1.5em;
+}
+
+#menu{
+	padding-top: 5em;
+	padding-left: 2em;
+	padding-right: 2em;
+
+	
+}
+
+#results{
+	display: none;
+	position: relative;
+
+}
+
+select {
+    margin: 0;
+    -webkit-border-radius:0px;
+    -moz-border-radius:0px;
+    border-radius:0px;
+    background: transparent;
+    color:black;
+    border:none;
+    outline:none;
+    display: inline-block;
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    appearance:none;
+    cursor:pointer;
+    font-weight: 300;
+    font-size: 22px;
+    padding-left: 0;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+.box {
+	margin-top: 0.5em;
+	width: 8em;
+	height: auto;
+    overflow: hidden;
+	background: url(../img/arrow-01.png) no-repeat right white;
+    text-align: left;
+    padding-left: 10px;
+    margin-left: 15px;
+    margin-right: 15px;
+    display: inline-block;
+    vertical-align: middle;
+    /*line-height: -10px;*/
+}
+
+h1{
+
+}
+
+.window{
+	color: #E74C3C;
+	height: auto;
+	width: 740px;
+	height: 800px;
+	background-color: #ECF0F1;
+	text-align: center;
+	font-size: 30px;
+	padding-top: 50px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-bottom: 4em;
+}
+
+#reset {
+	width: 50px;
+	height: auto;
+	position: absolute;
+	bottom: 20px;
+	right: 20px;
+	fill:#E74C3C;
+	cursor: pointer;
+}
+
+#reset:hover{
+	fill:#FF9795;
+}
+
+#submit{
+	width: 5em;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 1em;
+	border-radius: 5px;
+	color: white;
+	padding:15px;
+	cursor: pointer;
+	background-color: #E74C3C;
+
+}
+
+#commentary {
+	margin-top: 50px;
+	margin-left: 20px;
+	margin-right: 20px;
+	padding-left: 20px;
+	padding-right:20px;
+}
+
+#submit:hover{
+	background-color: #FF9795;
+
+}
+
+.figure{
+	height: 40px;
+	margin-left: 2px;
+	margin-right: 2px;
+	display: inline-block;
+}
+
+#visual{
+	padding-left: 20px;
+	padding-right:20px;
+}
+
+.fadeInY {
+  -webkit-animation-duration: 3s;
+  -webkit-animation-delay: 100s;
+  -webkit-animation-iteration-count: 2;
+}
+#commentary {
+	color: #2C3E50;
+
+}
+#commentary .highlight{
+	color: #E74C3C;
+	
+}
