@@ -19,7 +19,7 @@
 
 	var com = 'For every 100 people, there '
 
-	var usingnum;
+	var usingnum = {};
 
 	var s;
 
@@ -37,25 +37,28 @@
 
 			racegender.forEach(function(d){
 				d.roundp = Math.round(d.percentage).toString();
+				d.usingp = (Math.round(d.percentage * 10)/10).toString();
 			})
 
 			function domath(){
 				numbers = {'man':0,'woman':0, 
 						'highlight': {'man':0,
 									'woman':0}}
-				var gender = $('#gender').val();
-				var race = $('#race').val();
+				gender = $('#gender').val();
+				race = $('#race').val();
 				usingnum = _.findWhere(racegender,{'race':race,'gender':gender})
 				numbers.man = _.findWhere(racegender,{'race':'Total','gender':'Male'}).roundp
 				numbers.woman = _.findWhere(racegender,{'race':'Total','gender':'Female'}).roundp
 				if (usingnum.gender==='Male'){
 					numbers.highlight.man = Number(usingnum.roundp)
 					numbers.man = numbers.man-numbers.highlight.man;
+					usingnum.usinggender = 'Male'
 				}
 
 				if (usingnum.gender==='Female'){
 					numbers.highlight.woman = Number(usingnum.roundp)
 					numbers.woman = numbers.woman-numbers.highlight.woman;
+					usingnum.usinggender = 'Female'
 				}
 
 				if (usingnum.gender==='Total'){
@@ -92,8 +95,8 @@
 
 				} else {
 
-				if (usingnum.percentage<1){
-					usingnum.roundp = Math.round( usingnum.percentage * 10 ) / 10;;
+				if (usingnum.percentage < 1){
+					usingnum.roundp = Math.round(usingnum.percentage * 10) / 10;;
 				}
 
 					// $('.figure').addClass('animated bounceIn')
@@ -121,25 +124,22 @@
 
 				if (usingnum.gender=='Total'){
 					if (usingnum.gender=='Total' && isare == 'are'){
-						usingnum.gender='people';
+						usingnum.usinggender='people';
 					} else{
 						if (usingnum.gender=='Total' && isare == 'is'){
-						usingnum.gender='person';
+						usingnum.usinggender='person';
 						}
-
 					}
 					s = ''
 					
 				} 
 
-				
-
 				if (usingnum.race=='Total'){
 					usingnum.race=''
 				}
 
-				var sentence = '<span>'+com+'</span>'+isare+' '+ '<span class = "highlight">'+usingnum.roundp +' '+usingnum.race+' '+usingnum.gender.toLowerCase()+s+'</span> in the newspaper industry.'
-				var tweet = com + isare + ' ' + usingnum.roundp +' '+usingnum.race+' '+usingnum.gender.toLowerCase()+s+' in the newspaper industry.'
+				var sentence = '<span>'+com+'</span>'+isare+' '+ '<span class = "highlight">'+usingnum.usingp +' '+usingnum.race+' '+usingnum.usinggender.toLowerCase()+s+'</span> in the newspaper industry.'
+				var tweet = com + isare + ' ' + usingnum.usingp +' '+usingnum.race+' '+usingnum.usinggender.toLowerCase()+s+' in the newspaper industry.'
 				$('#commentary').append(sentence)
 
 				var tweettext = "https://twitter.com/intent/tweet?" + "url=http://www.poynter.org&via=poynter&text="+tweet;
