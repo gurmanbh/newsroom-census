@@ -142,7 +142,7 @@
 				var tweet = com + isare + ' ' + usingnum.usingp +' '+usingnum.race+' '+usingnum.usinggender.toLowerCase()+s+' in the newspaper industry.'
 				$('#commentary').append(sentence)
 
-				var tweettext = "https://twitter.com/intent/tweet?" + "url=http://www.poynter.org&via=poynter&text="+tweet;
+				var tweettext = "https://twitter.com/intent/tweet?" + "url=http://www.poynter.org/news/mediawire/361641/interactive-find-out-how-diverse-the-newspaper-industry-is/&via=poynter&text="+tweet;
 
 				$('#hyperlink').attr('href',tweettext)
 
