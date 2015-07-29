@@ -152,10 +152,16 @@
 			}
 
 			function runtotalcal(){
+
 				numbers.highlight.man = Number(_.findWhere(racegender,{'race':usingnum.race,'gender':'Male'}).roundp)
 				numbers.highlight.woman = Number(_.findWhere(racegender,{'race':usingnum.race,'gender':'Female'}).roundp)
 				numbers.man = numbers.man-numbers.highlight.man;
 				numbers.woman = numbers.woman-numbers.highlight.woman;
+
+				if (race == 'Asian'){
+					numbers.highlight.woman = numbers.highlight.woman +1
+					numbers.woman = numbers.woman - 1
+				}
 			}
 
 		});
