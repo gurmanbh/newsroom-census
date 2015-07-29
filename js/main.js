@@ -115,8 +115,13 @@
 				}
 
 				if (usingnum.roundp == '1'){
+					if (race = 'Asian'){
+						var isare = 'are';
+						s = 's'
+					} else {
 					var isare = 'is';
 					s = ''
+					}
 				} else {
 					var isare = 'are';
 					s = 's'
