@@ -8,12 +8,12 @@
 									'woman':0}
 
 					};
-	var man = '<img class = "figure animated bounceIn" src = "/img/man.svg">';
-	var woman = '<img class = "figure animated bounceIn" src = "/img/woman.svg">';
-	var hwoman = '<img class = "figure animated bounceIn" src = "/img/woman-h.svg">';
-	var hman = '<img class = "figure animated bounceIn" src = "/img/man-h.svg">';
-	var hwork = '<img class = "figure work animated bounceIn" src = "/img/work-h.svg">';
-	var work = '<img class = "figure work animated bounceIn" src = "/img/work.svg">';
+	var man = '<img class = "figure animated bounceIn" src = "img/man.svg">';
+	var woman = '<img class = "figure animated bounceIn" src = "img/woman.svg">';
+	var hwoman = '<img class = "figure animated bounceIn" src = "img/woman-h.svg">';
+	var hman = '<img class = "figure animated bounceIn" src = "img/man-h.svg">';
+	var hwork = '<img class = "figure work animated bounceIn" src = "img/work-h.svg">';
+	var work = '<img class = "figure work animated bounceIn" src = "img/work.svg">';
 
 
 
