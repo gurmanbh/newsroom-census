@@ -38,6 +38,7 @@
 			racegender.forEach(function(d){
 				d.roundp = Math.round(d.percentage).toString();
 				d.usingp = (Math.round(d.percentage * 10)/10).toString();
+				d.usingrace = d.race;
 			})
 
 			function domath(){
@@ -58,7 +59,7 @@
 				if (usingnum.gender==='Female'){
 					numbers.highlight.woman = Number(usingnum.roundp)
 					numbers.woman = numbers.woman-numbers.highlight.woman;
-					usingnum.usinggender = 'Female'
+					usingnum.usinggender = 'Female';
 				}
 
 				if (usingnum.gender==='Total'){
@@ -140,11 +141,11 @@
 				} 
 
 				if (usingnum.race=='Total'){
-					usingnum.race=''
+					usingnum.usingrace=''
 				}
 
-				var sentence = '<span>'+com+'</span>'+isare+' '+ '<span class = "highlight">'+usingnum.usingp +' '+usingnum.race+' '+usingnum.usinggender.toLowerCase()+s+'</span> in the newspaper industry.'
-				var tweet = com + isare + ' ' + usingnum.usingp +' '+usingnum.race+' '+usingnum.usinggender.toLowerCase()+s+' in the newspaper industry.'
+				var sentence = '<span>'+com+'</span>'+isare+' '+ '<span class = "highlight">'+usingnum.usingp +' '+usingnum.usingrace+' '+usingnum.usinggender.toLowerCase()+s+'</span> in the newspaper industry.'
+				var tweet = com + isare + ' ' + usingnum.usingp +' '+usingnum.usingrace+' '+usingnum.usinggender.toLowerCase()+s+' in the newspaper industry.'
 				$('#commentary').append(sentence)
 
 				var tweettext = "https://twitter.com/intent/tweet?" + "url=http://www.poynter.org/news/mediawire/361641/interactive-find-out-how-diverse-the-newspaper-industry-is/&via=poynter&text="+tweet;
