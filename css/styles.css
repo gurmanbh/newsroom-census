@@ -40,14 +40,14 @@ select {
     -webkit-border-radius:0px;
     -moz-border-radius:0px;
     border-radius:0px;
-    background: transparent;
+    /*background: transparent;*/
     color:#1b8480;
     border:none;
     outline:none;
     display: inline-block;
-    -webkit-appearance:none;
-    -moz-appearance:none;
-    appearance:none;
+    /*-webkit-appearance:none;*/
+    /*-moz-appearance:none;*/
+    /*appearance:none;*/
     cursor:pointer;
     font-weight: 300;
     font-size: 25px;
@@ -70,7 +70,7 @@ select {
     display: inline-block;
     vertical-align: -0.5em;
     border-bottom: dashed 2px black;
-    /*line-height: -10px;*/
+    line-height: -10px;
   	cursor: pointer;
   	text-align: center;
 }
