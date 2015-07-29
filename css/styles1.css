@@ -9,28 +9,23 @@ h1{
 	text-align: center;
 }
 
-#menu span{
+#screen1 span{
 	line-height: 3em;
 	font-size: 1.5em;
 }
 
-#menu{
+#screen1{
 	padding-top: 5em;
 	padding-left: 2em;
 	padding-right: 2em;
-
-	
 }
 
-#results{
+#screen2{
 	display: none;
-	position: relative;
 
+	padding: 0;
 }
-.figure.work{
-    height: 50px;
 
-}
 
 select {
     margin: 0;
@@ -38,7 +33,7 @@ select {
     -moz-border-radius:0px;
     border-radius:0px;
     background: transparent;
-    color:#1b8480;
+    color:black;
     border:none;
     outline:none;
     display: inline-block;
@@ -47,7 +42,7 @@ select {
     appearance:none;
     cursor:pointer;
     font-weight: 300;
-    font-size: 25px;
+    font-size: 22px;
     padding-left: 0;
     padding-top: 0.5em;
     padding-bottom: 0.5em;
@@ -58,70 +53,34 @@ select {
 	width: 8em;
 	height: auto;
     overflow: hidden;
-	background: url(../img/arrow.png) no-repeat right;
+	background: url(../img/arrow-01.png) no-repeat right white;
     text-align: left;
     padding-left: 10px;
     margin-left: 15px;
     margin-right: 15px;
     display: inline-block;
-    vertical-align: -0.5em;
-    border-bottom: dashed 2px black;
+    vertical-align: middle;
     /*line-height: -10px;*/
 }
 
-h1{
-
-}
-
 .window{
-	color: #1b8480;
+	position: relative;
+	color: #E74C3C;
 	height: auto;
 	width: 740px;
-	height: 800px;
 	background-color: #ECF0F1;
 	text-align: center;
 	font-size: 30px;
-	padding-top: 50px;
 	margin-left: auto;
 	margin-right: auto;
 	padding-bottom: 4em;
 }
 
-a#hyperlink{
-    color:inherit;
-    text-decoration: none;
+.twitter{
+	
 }
 
-a#hyperlink:hover{
-     color:#66d1c9;
-}
-
-#tweet{
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-}
-
-#tweet img{
-    height: 40px;
-    vertical-align: middle;
-}
-
-#reset {
-	width: 50px;
-	height: auto;
-	position: absolute;
-	bottom: 20px;
-	right: 20px;
-	fill:#1b8480;
-	cursor: pointer;
-}
-
-#reset:hover{
-	fill:#66d1c9;
-}
-
-#submit{
+.submit{
 	width: 5em;
 	margin-left: auto;
 	margin-right: auto;
@@ -130,7 +89,7 @@ a#hyperlink:hover{
 	color: white;
 	padding:15px;
 	cursor: pointer;
-	background-color: #1b8480;
+	background-color: #E74C3C;
 
 }
 
@@ -142,8 +101,8 @@ a#hyperlink:hover{
 	padding-right:20px;
 }
 
-#submit:hover{
-	background-color: #66d1c9;
+.submit:hover{
+	background-color: #FF9795;
 
 }
 
@@ -169,6 +128,37 @@ a#hyperlink:hover{
 
 }
 #commentary .highlight{
-	color: #1b8480;
+	color: #E74C3C;
 	
+}
+
+.top{
+	background-color:  #E74C3C;
+	width: 100%;
+	margin-bottom: 30px;
+	padding-top: 0.8em;
+	padding-bottom: 0.8em;
+	color: white;
+
+}
+
+#container .greybutton{
+	width: 3.2em;
+	height: auto;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 1em;
+	border-radius: 5px;
+	color: #E74C3C;
+	padding:15px;
+	cursor: pointer;
+	background-color: #ECF0F1;
+	font-size: 0.8em;
+	display: inline-block;
+}
+
+
+#container .greybutton:hover{
+	background-color: #FF9795;
+	color: white
 }

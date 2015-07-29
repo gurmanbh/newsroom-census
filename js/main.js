@@ -12,9 +12,12 @@
 	var woman = '<img class = "figure animated bounceIn" src = "/img/woman.svg">';
 	var hwoman = '<img class = "figure animated bounceIn" src = "/img/woman-h.svg">';
 	var hman = '<img class = "figure animated bounceIn" src = "/img/man-h.svg">';
+	var hwork = '<img class = "figure work animated bounceIn" src = "/img/work-h.svg">';
+	var work = '<img class = "figure work animated bounceIn" src = "/img/work.svg">';
 
 
-	var com = '<span>For every 100 people, there </span>'
+
+	var com = 'For every 100 people, there '
 
 	var usingnum;
 
@@ -79,8 +82,27 @@
 				console.log(usingnum);
 				$('#menu').css({'display':'none'})
 				$('#results').css({'display':'block'});
-				
-				// $('.figure').addClass('animated bounceIn')
+
+				if (gender == 'Total' && race == 'Total'){
+					$('#visual').html('');
+					$('#commentary').html('');
+					var sentence = '<span>For every 100 newsrooms, </span><span class = "highlight">63</span> have at least one woman among top three editors.'
+					var tweet = 'For every 100 newsrooms, 63 have at least one woman among top three editors.'
+					$('#commentary').append(sentence)
+					for (i = 1; i<=63; i++){
+						$('#visual').append(hwork);
+					}
+					for (i = 1; i<=37; i++){
+						$('#visual').append(work);
+					}
+
+					var tweettext = "https://twitter.com/intent/tweet?" + "url=http://www.poynter.org&via=poynter&text="+tweet;
+
+				$('#hyperlink').attr('href',tweettext)
+
+				} else {
+
+					// $('.figure').addClass('animated bounceIn')
 				for (i = 1; i<=numbers.highlight.woman; i++){
 					$('#visual').append(hwoman);
 				}
@@ -95,8 +117,6 @@
 					$('#visual').append(woman);
 				}
 
-				$('#commentary').append(com);
-
 				if (usingnum.roundp == '1'){
 					var isare = 'is';
 					s = ''
@@ -109,8 +129,23 @@
 					usingnum.gender='people'
 					s = ''
 				}
+				if (usingnum.race=='Total'){
+					usingnum.race=''
+				}
 
-				$('#commentary').append(isare+' '+ '<span class = "highlight">'+usingnum.roundp +' '+usingnum.race+' '+usingnum.gender.toLowerCase()+s+'</span> in the newspaper industry.')
+				var sentence = '<span>'+com+'</span>'+isare+' '+ '<span class = "highlight">'+usingnum.roundp +' '+usingnum.race+' '+usingnum.gender.toLowerCase()+s+'</span> in the newspaper industry.'
+				var tweet = com + isare + ' ' + usingnum.roundp +' '+usingnum.race+' '+usingnum.gender.toLowerCase()+s+' in the newspaper industry.'
+				$('#commentary').append(sentence)
+
+				var tweettext = "https://twitter.com/intent/tweet?" + "url=http://www.poynter.org&via=poynter&text="+tweet;
+
+				$('#hyperlink').attr('href',tweettext)
+
+				}
+				
+				
+
+				
 
 			}
 
@@ -119,7 +154,6 @@
 				numbers.highlight.woman = Number(_.findWhere(racegender,{'race':usingnum.race,'gender':'Female'}).roundp)
 				numbers.man = numbers.man-numbers.highlight.man;
 				numbers.woman = numbers.woman-numbers.highlight.woman;
-
 			}
 
 		});
