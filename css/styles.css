@@ -29,8 +29,8 @@ a{
 #results{
 	display: none;
 	position: relative;
-
 }
+
 .figure.work{
     height: 50px;
 }
@@ -57,11 +57,12 @@ select {
 }
 
 .box {
+	position: relative;
 	margin-top: 0.5em;
 	width: 8em;
 	height: auto;
     overflow: hidden;
-	background: url(../img/arrow.png) no-repeat right;
+	/*background: url(../img/arrow.png) no-repeat right;*/
     text-align: left;
     padding-left: 10px;
     margin-left: 15px;
@@ -70,6 +71,8 @@ select {
     vertical-align: -0.5em;
     border-bottom: dashed 2px black;
     /*line-height: -10px;*/
+  	cursor: pointer;
+  	text-align: center;
 }
 
 h1{
@@ -234,7 +237,7 @@ a#source{
 		margin-right: 10px;
 		padding-left: 10px;
 		padding-right:10px;
-	font-size: 0.7em;
+		font-size: 0.7em;
 	}
 }
 

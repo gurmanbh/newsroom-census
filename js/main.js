@@ -30,8 +30,6 @@
 
 	d3.csv ('data/racegender.csv', function(error, racegender){
 		d3.csv ('data/rolegender.csv', function(error, role){
-			console.log(racegender);
-			console.log(role)
 			$('#submit').on('click',function(){
 				domath();
 				bakeresults();
@@ -47,10 +45,7 @@
 									'woman':0}}
 				var gender = $('#gender').val();
 				var race = $('#race').val();
-				console.log(gender)
-				console.log(race)
 				usingnum = _.findWhere(racegender,{'race':race,'gender':gender})
-				console.log(usingnum);
 				numbers.man = _.findWhere(racegender,{'race':'Total','gender':'Male'}).roundp
 				numbers.woman = _.findWhere(racegender,{'race':'Total','gender':'Female'}).roundp
 				if (usingnum.gender==='Male'){
@@ -67,10 +62,6 @@
 					runtotalcal();
 				}
 
-				console.log(numbers)
-
-
-
 			}
 			
 			function bakeresults (){
@@ -79,7 +70,6 @@
 				var gender = $('#gender').val();
 				var race = $('#race').val();
 				usingnum = _.findWhere(racegender,{'race':race,'gender':gender})
-				console.log(usingnum);
 				$('#menu').css({'display':'none'})
 				$('#results').css({'display':'block'});
 
@@ -101,6 +91,10 @@
 				$('#hyperlink').attr('href',tweettext)
 
 				} else {
+
+				if (usingnum.percentage<1){
+					usingnum.roundp = Math.round( usingnum.percentage * 10 ) / 10;;
+				}
 
 					// $('.figure').addClass('animated bounceIn')
 				for (i = 1; i<=numbers.highlight.woman; i++){
