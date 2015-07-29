@@ -86,7 +86,7 @@
 				if (gender == 'Total' && race == 'Total'){
 					$('#visual').html('');
 					$('#commentary').html('');
-					var sentence = '<span>For every 100 newsrooms, </span><span class = "highlight">63</span> have at least one woman among top three editors.'
+					var sentence = "Since you didn't choose an option, here is a fact.<span>For every 100 newsrooms, </span><span class = 'highlight'>63</span> have at least one woman among top three editors."
 					var tweet = 'For every 100 newsrooms, 63 have at least one woman among top three editors.'
 					$('#commentary').append(sentence)
 					for (i = 1; i<=63; i++){
@@ -129,6 +129,11 @@
 					usingnum.gender='people'
 					s = ''
 				}
+
+				if (usingnum.gender=='Total' && usingnum.roundp == '1'){
+					usingnum.gender='person';
+				}
+
 				if (usingnum.race=='Total'){
 					usingnum.race=''
 				}
@@ -144,9 +149,6 @@
 				}
 				
 				
-
-				
-
 			}
 
 			function runtotalcal(){
