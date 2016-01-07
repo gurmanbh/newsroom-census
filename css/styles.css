@@ -270,3 +270,20 @@ a#source{
 	}
 }
 
+@media (max-width: 400px){
+
+	#commentary {
+		margin-top: 3px;
+		font-size: 0.7em;
+		line-height: 0.8em;
+	}
+
+	.figure{
+		height: 25px;
+	}
+
+	.figure.work{
+		height: 30px;
+	}
+}
+
