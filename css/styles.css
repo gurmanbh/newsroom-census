@@ -8,6 +8,7 @@
 
 body {
 	height: 800px;
+	width: 700px;
 }
 
 h1{
@@ -38,7 +39,9 @@ a{
 }
 
 .figure.work{
-    height: 50px;
+    height: 40px;
+    	margin-left: 0.1em;
+	margin-right: 0.1em;
 }
 
 select {
@@ -215,6 +218,10 @@ a#source{
 
 	*{
 		line-height: 1.5em;
+	}
+
+	body{
+		width: 100%
 	}
 
 	#menu span{
