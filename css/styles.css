@@ -6,11 +6,6 @@
 	line-height: 1.5em;
 }
 
-body {
-	height: 800px;
-	width: 700px;
-}
-
 h1{
 	text-align: center;
 }
@@ -218,10 +213,6 @@ a#source{
 
 	*{
 		line-height: 1.5em;
-	}
-
-	body{
-		width: 100%
 	}
 
 	#menu span{
