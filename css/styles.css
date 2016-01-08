@@ -181,9 +181,10 @@ a#source{
 }
 
 .figure{
-	height: 40px;
-	margin-left: 2px;
-	margin-right: 2px;
+	height: 45px;
+	margin-left: 0.4em;
+	margin-right: 0.4em;
+	margin-bottom: 0.1em;
 	display: inline-block;
 }
 
@@ -305,7 +306,7 @@ a#source{
 	}
 
 	.figure{
-		height: 25px;
+		height: 30px;
 		margin-left: 0.1em ;
 		margin-right: 0.1em;
 	}
